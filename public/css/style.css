@@ -1,0 +1,82 @@
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex:1;
+}
+.main{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.card-img-top{
+   
+    border-radius: 1rem;
+}
+.card1{
+    padding: 0;
+    margin-bottom: 1rem;
+}
+.listing-link{
+    text-decoration: none;
+}
+.card1:hover{
+    opacity: 0.8;
+}
+.fa-regular{
+ font-size: 2rem;
+ color: red;
+}
+
+
+.card-body{
+   margin-top: 0;
+}
+.btns{
+ 
+    display:flex;
+    width:300px;
+    margin-top: 0;
+    justify-content: space-between;
+}
+.btn{
+    width: 100px;
+}
+.new{
+    margin-bottom: 1rem;
+}
+.new1{
+    margin: 1rem;
+}
+/* footer */
+.f-info-links a{
+    text-decoration: none;
+    color:#222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links,.f-info-socials,.f-info-brand{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.f-info{
+    text-align: center;
+    display: flex;
+    height:8rem;background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+
+}

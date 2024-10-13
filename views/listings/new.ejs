@@ -1,0 +1,40 @@
+<% layout('./layouts/boilerplateCode') -%>
+<div class=" row new1 offset-3">
+    <h1>Create Your Own Listings:</h1>
+<div class="row new">
+    <form action="/listings" method="POST" class="needs-validation" novalidate>
+        <div class="title">
+            <label for="title" class="form-label">Title:</label>
+        <input type="text" placeholder="Enter a Catchy Title" class="form-control" id="title" name="listing[title]" required>
+        <div class="valid-feedback">
+            Title looks Good
+          </div>
+        </div>
+        <div class="description">
+            <label for="description" class="form-label">Description:</label>
+        <textarea name="listing[description]" id="description" required minlength="20" class="form-control" placeholder="Description" ></textarea>
+        <div class="invalid-feedback">
+            Description must be of 20words
+          </div>
+        </div>
+        <label for="image" class="form-label">Image-URL</label>
+        <input type="text" placeholder="Image-URL/LINK" required name="listing[image]" id="image" class="form-control">
+        <div class="row">
+           <div class="price col-4">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" placeholder="1200" required min="1000" id="price" class="form-control" name="listing[price]" >
+            <div class="invalid-feedback">
+                Price greater than 1000
+              </div>
+           </div>
+        <div class="country col-8">
+            <label for="country" class="form-label">Country:</label>
+        <input type="text" placeholder="India" required name="listing[country]" class="form-control" id="country" >
+        </div>
+        </div>
+        <label for="location" class="form-label">Location:</label>
+        <input type="text" placeholder="jaipur,Rajasthan" required name="listing[location]" class="form-control" id="location" >
+        <button type="submit" class="btn btn-danger" style="margin-top: 1rem;">Submit</button>
+    </form>
+</div>
+</div>
