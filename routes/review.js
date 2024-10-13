@@ -10,18 +10,18 @@ const Review=require("../models/reviews.js");
 // models require
 const Listing=require("../models/listing.js");
 // validate
-const validateReview=(req,res,next)=>{
-    let {error}=reviewSchema.validate(req.body);
+// const validateReview=(req,res,next)=>{
+//     let {error}=reviewSchema.validate(req.body);
     
-    if(error){
-        let errMsg=error.details.map((el)=>el.message).join(",");
-        throw new ExpressError(400,errMsg);
-    }else{
-        next();
-    }
-}
+//     if(error){
+//         let errMsg=error.details.map((el)=>el.message).join(",");
+//         throw new ExpressError(400,errMsg);
+//     }else{
+//         next();
+//     }
+// }
 // add review route
-router.post("/",validateReview,wrapAsync(async(req,res)=>{
+router.post("/",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     let listing=await Listing.findById(req.params.id);
     let newReview=new Review(req.body.review);
