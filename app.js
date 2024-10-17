@@ -44,7 +44,7 @@ const sessionOption={
     secret:"mySecretCode",
     resave:false,
     saveUninitialized:true,
-    cookies:{
+    cookie:{
         expires:Date.now()+1000*60*60*24*3,
         maxAge:1000*60*60*24*3,
         httpOny:true
@@ -56,8 +56,12 @@ app.use(flash());
 app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
     res.locals.error=req.flash("error");
+    
+    res.locals.currUser=req.user;
+   
     next();
 })
+
 // passport work
 app.use(passport.initialize());
 
