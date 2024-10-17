@@ -3,7 +3,7 @@
 // wrapAsync
 let wrapAsync=require("../utils/wrapAsync.js");
 let ExpressError=require("../utils/ExpressError.js");
-const isLoggedIn=require("../middleware.js");
+const {isLoggedIn}=require("../middleware.js");
 // joi
 const {listingSchema}=require("../schema.js");
 // function for joi
